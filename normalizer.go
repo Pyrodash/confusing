@@ -7,21 +7,21 @@ import (
 )
 
 const (
-	SnakeConvention      = "snake"
-	CamelConvention      = "camel"
-	UpperSnakeConvention = "upper_snake"
+	SnakeCaseConvention      = "snake"
+	CamelCaseConvention      = "camel"
+	UpperSnakeCaseConvention = "upper_snake"
 )
 
 var normalizers = map[string]KeyNormalizer{
-	SnakeConvention:      &SnakeCaseNormalizer{},
-	CamelConvention:      &CamelCaseNormalizer{},
-	UpperSnakeConvention: &UpperSnakeCaseNormalizer{},
+	SnakeCaseConvention:      &SnakeCaseNormalizer{},
+	CamelCaseConvention:      &CamelCaseNormalizer{},
+	UpperSnakeCaseConvention: &UpperSnakeCaseNormalizer{},
 }
 
 var sourceConventions = map[string]string{
-	EnvSourceType:  UpperSnakeConvention,
-	YAMLSourceType: SnakeConvention,
-	JSONSourceType: CamelConvention,
+	EnvSourceType:  UpperSnakeCaseConvention,
+	YAMLSourceType: SnakeCaseConvention,
+	JSONSourceType: CamelCaseConvention,
 }
 
 type UnknownConventionError struct {

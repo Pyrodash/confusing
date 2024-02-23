@@ -99,7 +99,7 @@ source, err := confusing.NewSource(confusing.Options{
 ```
 Note that when you specify a convention this way, it's going to be enforced upon whatever type of source is selected. There's a better way to programmatically change the default convention for a specific source type:
 ```go
-confusing.SetConventionForSourceType(confusing.JSONSourceType, confusing.SnakeConvention)
+confusing.SetConventionForSourceType(confusing.JSONSourceType, confusing.SnakeCaseConvention)
 
 source, err := confusing.NewSource(confusing.Options{
     SourceOptions: confusing.SourceOptions{
