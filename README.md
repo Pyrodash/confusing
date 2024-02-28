@@ -32,7 +32,7 @@ The enforced key-naming convention is `UPPER_SNAKE_CASE`.
 
 For example, to read `"Hello world"` from this environment variable:
 ```
-CONFUSING_WELCOME_MESSAGE="world"
+CONFUSING_WELCOME_MESSAGE="Hello world"
 ```
 
 We can do the following:
@@ -110,13 +110,14 @@ source, err := confusing.NewSource(confusing.Options{
 
 ## Reading Configurations
 Example:
+
 ```go
 // main.go
 package main
 
 import (
-	"confusing"
 	"fmt"
+	"github.com/Pyrodash/confusing"
 )
 
 type DatabaseConfig struct {
@@ -127,8 +128,8 @@ type DatabaseConfig struct {
 }
 
 type OAuth2Provider struct {
-	Key string
-    Secret string
+	Key    string
+	Secret string
 }
 
 type MyConfig struct {

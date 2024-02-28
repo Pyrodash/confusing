@@ -1,4 +1,4 @@
-module confusing
+module github.com/Pyrodash/confusing
 
 go 1.21
 
